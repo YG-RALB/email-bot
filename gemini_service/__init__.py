@@ -12,4 +12,6 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 def get_response(prompt):
     response = model.generate_content(prompt)
+    if response == None:
+        response = "There is a violation please ephrase the mail."
     return response
